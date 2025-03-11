@@ -25,27 +25,45 @@ const Index: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Hero Section with Gradient Background */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-mussko-50 via-mussko-100 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjZmZmIiB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3MDAiLz48Y2lyY2xlIHN0cm9rZT0iIzFiMWFmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIxMCIgY3g9IjcwMCIgY3k9IjUwMCIgcj0iMjAwIi8+PGNpcmNsZSBzdHJva2U9IiMxYjFhZmYiIHN0cm9rZS1vcGFjaXR5PSIuMDMiIHN0cm9rZS13aWR0aD0iMjAiIGN4PSI3MDAiIGN5PSI1MDAiIHI9IjMwMCIvPjxjaXJjbGUgc3Ryb2tlPSIjMWIxYWZmIiBzdHJva2Utb3BhY2l0eT0iLjAyIiBzdHJva2Utd2lkdGg9IjIwIiBjeD0iNzAwIiBjeT0iNTAwIiByPSI0MDAiLz48cGF0aCBkPSJNMTQ0MCAyNTB2NDUwSDBWMjUwUTYwMC41IDUwIDcyMCA1MHE1NTMgMCA3MjAgMjAweiIgZmlsbD0iIzFiMWFmZiIgZmlsbC1vcGFjaXR5PSIuMDIiLz48L2c+PC9zdmc+')] opacity-40 mix-blend-overlay"></div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
+      {/* Hero Section with Vibrant Gradient Background */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
+        {/* Gradient background with floating geometric shapes */}
+        <div className="absolute inset-0 bg-gradient-to-br from-mussko-600 via-mussko-500 to-purple-500 z-0"></div>
+        
+        {/* Geometric shapes */}
+        <div className="absolute inset-0 z-10 overflow-hidden">
+          {/* Large rectangle */}
+          <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/10 rounded-2xl rotate-12 backdrop-blur-sm"></div>
+          
+          {/* Small square */}
+          <div className="absolute left-1/4 bottom-1/4 w-40 h-40 bg-mussko-300/20 rounded-xl -rotate-12 backdrop-blur-sm"></div>
+          
+          {/* Medium rectangle */}
+          <div className="absolute left-10 top-20 w-72 h-40 bg-purple-300/10 rounded-2xl rotate-6 backdrop-blur-sm"></div>
+          
+          {/* Circle */}
+          <div className="absolute right-1/4 bottom-10 w-56 h-56 bg-blue-300/10 rounded-full backdrop-blur-sm"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-6 md:px-12 relative z-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-slide-up" style={{ animationFillMode: 'both' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up" style={{ animationFillMode: 'both' }}>
               We Build <span className="text-gradient">Innovative</span> SaaS Products
             </h1>
-            <p className="text-xl mb-8 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            <p className="text-xl mb-8 text-white/90 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
               Simplifying complex business processes with elegant software solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
               <a 
                 href="#products" 
-                className="py-3 px-8 rounded-lg bg-mussko-600 text-white font-medium hover:bg-mussko-700 transition-colors button-shine"
+                className="py-3 px-8 rounded-lg bg-white text-mussko-700 font-medium hover:bg-opacity-90 transition-colors button-shine"
               >
                 Explore Products
               </a>
               <a 
                 href="#contact" 
-                className="py-3 px-8 rounded-lg border border-mussko-300 text-mussko-700 font-medium hover:bg-mussko-50 transition-colors"
+                className="py-3 px-8 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
               >
                 Contact Us
               </a>
