@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Sparkle } from 'lucide-react';
 
@@ -28,7 +29,7 @@ const Footer: React.FC = () => {
                   href="https://scheduleleave.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-mussko-600 hover:text-mussko-800 transition-colors"
+                  className="text-sm text-black hover:text-gray-700 transition-colors"
                 >
                   ScheduleLeave
                 </a>
@@ -38,7 +39,7 @@ const Footer: React.FC = () => {
                   href="https://genalttext.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-mussko-600 hover:text-mussko-800 transition-colors"
+                  className="text-sm text-black hover:text-gray-700 transition-colors"
                 >
                   GenAltText
                 </a>
@@ -52,7 +53,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="#contact" 
-                  className="text-sm text-mussko-600 hover:text-mussko-800 transition-colors"
+                  className="text-sm text-black hover:text-gray-700 transition-colors"
                 >
                   Contact Form
                 </a>
