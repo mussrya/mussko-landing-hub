@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-mussko-50 border-t border-mussko-100">
+    <footer className="bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-mussko-100">
+        <div className="mt-12 pt-8 border-t border-gray-100">
           <p className="text-sm text-mussko-500 text-center">
             © {currentYear} MussKo. All rights reserved.
           </p>

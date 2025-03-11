@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -71,22 +72,6 @@
   
   .image-container img {
     @apply transition-all duration-700 ease-in-out hover:scale-105;
-  }
-  
-  .gradient-bg-primary {
-    @apply bg-gradient-to-br from-mussko-500 to-mussko-700;
-  }
-  
-  .gradient-bg-light {
-    @apply bg-gradient-to-b from-white to-mussko-50;
-  }
-  
-  .gradient-bg-accent {
-    @apply bg-gradient-to-r from-mussko-400 via-mussko-500 to-mussko-600;
-  }
-  
-  .gradient-border {
-    @apply border border-transparent bg-gradient-to-r from-mussko-300 to-mussko-500 bg-clip-border;
   }
   
   .subtle-shadow {

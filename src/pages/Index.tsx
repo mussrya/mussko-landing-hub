@@ -55,7 +55,7 @@ const Index: React.FC = () => {
       </section>
       
       {/* Products Section */}
-      <section id="products" className="py-16 md:py-24 bg-gradient-to-b from-white to-mussko-50">
+      <section id="products" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <div className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-mussko-100 text-mussko-700 mb-3 animate-fade-in" style={{ animationFillMode: 'both' }}>
@@ -84,7 +84,7 @@ const Index: React.FC = () => {
       </section>
       
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 bg-mussko-50">
+      <section id="contact" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
