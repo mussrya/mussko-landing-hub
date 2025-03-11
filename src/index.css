@@ -47,6 +47,16 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Add default text styling */
+  p {
+    @apply text-gray-800; /* Soft black for paragraph text */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-mussko-500; /* Brand blue for all headings */
+    color: rgb(27, 26, 255);
+  }
 }
 
 @layer components {
