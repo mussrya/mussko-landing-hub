@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 215 32% 50%;
+    --primary: 240 100% 55%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 20% 96%;
@@ -25,7 +25,7 @@
     --muted: 210 20% 96%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 215 32% 95%;
+    --accent: 240 100% 95%;
     --accent-foreground: 215 25% 27%;
 
     --destructive: 0 84% 60%;
@@ -73,4 +73,25 @@
   .image-container img {
     @apply transition-all duration-700 ease-in-out hover:scale-105;
   }
+  
+  .gradient-bg-primary {
+    @apply bg-gradient-to-br from-mussko-500 to-mussko-700;
+  }
+  
+  .gradient-bg-light {
+    @apply bg-gradient-to-b from-white to-mussko-50;
+  }
+  
+  .gradient-bg-accent {
+    @apply bg-gradient-to-r from-mussko-400 via-mussko-500 to-mussko-600;
+  }
+  
+  .gradient-border {
+    @apply border border-transparent bg-gradient-to-r from-mussko-300 to-mussko-500 bg-clip-border;
+  }
+  
+  .subtle-shadow {
+    box-shadow: 0 10px 30px -15px rgba(27, 26, 255, 0.15);
+  }
 }
+
