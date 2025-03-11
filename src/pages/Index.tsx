@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import ProductCard from '@/components/ProductCard';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import { Rocket, Code, HeadsetIcon } from 'lucide-react';
 
 const Index: React.FC = () => {
   const products = [
@@ -119,15 +120,21 @@ const Index: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-2">Why Choose MussKo?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-mussko-100 text-mussko-700 mr-3">✓</span>
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                      <Rocket size={18} />
+                    </span>
                     <span>Innovative SaaS solutions</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-mussko-100 text-mussko-700 mr-3">✓</span>
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                      <Code size={18} />
+                    </span>
                     <span>Simplify complex business processes</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-mussko-100 text-mussko-700 mr-3">✓</span>
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                      <HeadsetIcon size={18} />
+                    </span>
                     <span>Dedicated customer support</span>
                   </li>
                 </ul>
