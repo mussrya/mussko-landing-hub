@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Sparkle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,12 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">MussKo</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center justify-center w-8 h-8 bg-mussko-500 rounded-lg text-white">
+                <Sparkle size={18} className="animate-pulse" />
+              </div>
+              <h3 className="text-lg font-bold">MussKo</h3>
+            </div>
             <p className="max-w-xs">
               Specializing in building innovative SaaS products that simplify complex business processes.
             </p>
