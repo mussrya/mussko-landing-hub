@@ -31,21 +31,25 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-center w-8 h-8 bg-mussko-500 rounded-lg text-white">
             <Sparkle size={18} className="animate-pulse" />
           </div>
-          <span className="text-xl font-bold text-mussko-800">MussKo</span>
+          <span className={`text-xl font-bold ${scrolled ? 'text-mussko-800' : 'text-white'}`}>MussKo</span>
         </a>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#products" className="text-sm font-medium text-mussko-700 hover:text-mussko-900 transition-colors">
+          <a href="#products" className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}>
             Products
           </a>
-          <a href="#contact" className="text-sm font-medium text-mussko-700 hover:text-mussko-900 transition-colors">
+          <a href="#contact" className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}>
             Contact
           </a>
         </nav>
         
         <a 
           href="#contact" 
-          className="py-2 px-4 rounded-lg bg-mussko-600 text-white text-sm font-medium hover:bg-mussko-700 transition-colors button-shine"
+          className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors button-shine ${
+            scrolled 
+              ? 'bg-mussko-600 text-white hover:bg-mussko-700' 
+              : 'bg-white text-mussko-700 hover:bg-white/90'
+          }`}
         >
           Get in Touch
         </a>
