@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, description, url, imag
           </div>
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
         </div>
-        <p className="text-muted-foreground mb-6 flex-grow">{description}</p>
+        <p className="mb-6 flex-grow">{description}</p>
         <a 
           href={url} 
           target="_blank" 

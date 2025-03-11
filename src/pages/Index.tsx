@@ -33,7 +33,7 @@ const Index: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up" style={{ animationFillMode: 'both' }}>
               We Build <span className="text-gradient">Innovative</span> SaaS Products
             </h1>
-            <p className="text-xl text-mussko-600 mb-8 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            <p className="text-xl mb-8 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
               Simplifying complex business processes with elegant software solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
@@ -64,7 +64,7 @@ const Index: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up" style={{ animationFillMode: 'both' }}>
               Powerful SaaS Products
             </h2>
-            <p className="text-lg text-mussko-600 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            <p className="text-lg max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
               Discover our suite of innovative software solutions designed to enhance productivity and simplify workflows.
             </p>
           </div>
@@ -94,7 +94,7 @@ const Index: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up" style={{ animationFillMode: 'both' }}>
                 Contact Us
               </h2>
-              <p className="text-lg text-mussko-600 mb-6 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+              <p className="text-lg mb-6 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
                 Have questions about our products or interested in learning more? We'd love to hear from you!
               </p>
               <div className="bg-white rounded-xl p-6 border border-mussko-100 shadow-sm mb-6 animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>

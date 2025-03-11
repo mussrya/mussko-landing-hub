@@ -9,14 +9,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold text-mussko-800 mb-4">MussKo</h3>
-            <p className="text-mussko-600 max-w-xs">
+            <h3 className="text-lg font-bold mb-4">MussKo</h3>
+            <p className="max-w-xs">
               Specializing in building innovative SaaS products that simplify complex business processes.
             </p>
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold text-mussko-800 mb-4">Products</h4>
+            <h4 className="text-sm font-semibold mb-4">Products</h4>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold text-mussko-800 mb-4">Contact</h4>
+            <h4 className="text-sm font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-100">
-          <p className="text-sm text-mussko-500 text-center">
+          <p className="text-sm text-center">
             © {currentYear} MussKo. All rights reserved.
           </p>
         </div>
