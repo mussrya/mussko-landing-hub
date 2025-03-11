@@ -30,7 +30,7 @@ const Index: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjZmZmIiB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3MDAiLz48Y2lyY2xlIHN0cm9rZT0iIzFiMWFmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIxMCIgY3g9IjcwMCIgY3k9IjUwMCIgcj0iMjAwIi8+PGNpcmNsZSBzdHJva2U9IiMxYjFhZmYiIHN0cm9rZS1vcGFjaXR5PSIuMDMiIHN0cm9rZS13aWR0aD0iMjAiIGN4PSI3MDAiIGN5PSI1MDAiIHI9IjMwMCIvPjxjaXJjbGUgc3Ryb2tlPSIjMWIxYWZmIiBzdHJva2Utb3BhY2l0eT0iLjAyIiBzdHJva2Utd2lkdGg9IjIwIiBjeD0iNzAwIiBjeT0iNTAwIiByPSI0MDAiLz48cGF0aCBkPSJNMTQ0MCAyNTB2NDUwSDBWMjUwUTYwMC41IDUwIDcyMCA1MHE1NTMgMCA3MjAgMjAweiIgZmlsbD0iIzFiMWFmZiIgZmlsbC1vcGFjaXR5PSIuMDIiLz48L2c+PC9zdmc+')] opacity-40 mix-blend-overlay"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up" style={{ animationFillMode: 'both' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-slide-up" style={{ animationFillMode: 'both' }}>
               We Build <span className="text-gradient">Innovative</span> SaaS Products
             </h1>
             <p className="text-xl mb-8 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>

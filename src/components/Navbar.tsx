@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Sparkle } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,10 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center gap-2">
+          <div className="flex items-center justify-center w-8 h-8 bg-mussko-500 rounded-lg text-white">
+            <Sparkle size={18} className="animate-pulse" />
+          </div>
           <span className="text-xl font-bold text-mussko-800">MussKo</span>
         </a>
         
