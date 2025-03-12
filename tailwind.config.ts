@@ -114,6 +114,30 @@ export default {
 				'image-shine': {
 					'0%': { backgroundPosition: '200% 0' },
 					'100%': { backgroundPosition: '-200% 0' }
+				},
+				// New animations for floating shapes
+				'float-slow': {
+					'0%, 100%': { transform: 'translateY(0) rotate(12deg)' },
+					'50%': { transform: 'translateY(-10px) rotate(12deg)' }
+				},
+				'float-medium': {
+					'0%, 100%': { transform: 'translateY(0) rotate(6deg)' },
+					'50%': { transform: 'translateY(-15px) rotate(6deg)' }
+				},
+				'float-fast': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'float-rotate': {
+					'0%': { transform: 'translateY(0) rotate(-12deg)' },
+					'25%': { transform: 'translateY(-10px) rotate(-8deg)' },
+					'50%': { transform: 'translateY(0) rotate(-4deg)' },
+					'75%': { transform: 'translateY(10px) rotate(-8deg)' },
+					'100%': { transform: 'translateY(0) rotate(-12deg)' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { transform: 'scale(1)', opacity: '0.2' },
+					'50%': { transform: 'scale(1.05)', opacity: '0.3' }
 				}
 			},
 			animation: {
@@ -122,7 +146,13 @@ export default {
 				'slide-up': 'slide-up 0.6s ease-out',
 				'fade-in': 'fade-in 0.8s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
-				'image-shine': 'image-shine 2.5s linear infinite'
+				'image-shine': 'image-shine 2.5s linear infinite',
+				// New animations for the floating shapes
+				'floating-slow': 'float-slow 8s ease-in-out infinite',
+				'floating-medium': 'float-medium 6s ease-in-out infinite',
+				'floating-fast': 'float-fast 4s ease-in-out infinite',
+				'floating-rotate': 'float-rotate 10s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 7s ease-in-out infinite'
 			}
 		}
 	},

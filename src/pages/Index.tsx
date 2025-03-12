@@ -33,17 +33,21 @@ const Index: React.FC = () => {
         
         {/* Geometric shapes */}
         <div className="absolute inset-0 z-10 overflow-hidden">
-          {/* Large rectangle */}
-          <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/10 rounded-2xl rotate-12 backdrop-blur-sm"></div>
+          {/* Large rectangle - slow floating animation */}
+          <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/10 rounded-2xl rotate-12 backdrop-blur-sm animate-floating-slow"></div>
           
-          {/* Small square */}
-          <div className="absolute left-1/4 bottom-1/4 w-40 h-40 bg-mussko-300/20 rounded-xl -rotate-12 backdrop-blur-sm"></div>
+          {/* Small square - medium speed floating and rotating animation */}
+          <div className="absolute left-1/4 bottom-1/4 w-40 h-40 bg-mussko-300/20 rounded-xl -rotate-12 backdrop-blur-sm animate-floating-rotate"></div>
           
-          {/* Medium rectangle */}
-          <div className="absolute left-10 top-20 w-72 h-40 bg-purple-300/10 rounded-2xl rotate-6 backdrop-blur-sm"></div>
+          {/* Medium rectangle - bobbing animation */}
+          <div className="absolute left-10 top-20 w-72 h-40 bg-purple-300/10 rounded-2xl rotate-6 backdrop-blur-sm animate-floating-medium"></div>
           
-          {/* Circle */}
-          <div className="absolute right-1/4 bottom-10 w-56 h-56 bg-blue-300/10 rounded-full backdrop-blur-sm"></div>
+          {/* Circle - pulse animation */}
+          <div className="absolute right-1/4 bottom-10 w-56 h-56 bg-blue-300/10 rounded-full backdrop-blur-sm animate-pulse-slow"></div>
+          
+          {/* Additional small shapes for more movement */}
+          <div className="absolute left-2/3 top-1/3 w-20 h-20 bg-yellow-300/10 rounded-lg backdrop-blur-sm animate-floating-fast"></div>
+          <div className="absolute right-1/3 top-1/6 w-24 h-24 bg-pink-300/10 rounded-full backdrop-blur-sm animate-pulse"></div>
         </div>
         
         {/* Content */}
