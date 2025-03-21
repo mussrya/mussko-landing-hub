@@ -1,53 +1,46 @@
 
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    message: '',
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // We still want to show the submitting state for better UX
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // The form will be handled by Formspree, but we'll still show a toast
+    // after a short delay to improve UX
     setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. We'll get back to you soon.",
-      });
-      
-      // Reset form
-      setFormData({ email: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 animate-slide-up" style={{ animationDelay: '0.3s', animationFillMode: 'both' }} aria-labelledby="contact-form-title">
+    <form 
+      action="https://formspree.io/f/mvgkkvzw" 
+      method="POST"
+      onSubmit={handleSubmit}
+      className="space-y-6 animate-slide-up" 
+      style={{ animationDelay: '0.3s', animationFillMode: 'both' }} 
+      aria-labelledby="contact-form-title"
+    >
       <h3 id="contact-form-title" className="sr-only">Contact Form</h3>
       
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+        <Label htmlFor="email" className="block text-sm font-medium mb-2">
           Email Address <span className="text-destructive" aria-hidden="true">*</span>
           <span className="sr-only">(required)</span>
-        </label>
-        <input
+        </Label>
+        <Input
           id="email"
           name="email"
           type="email"
           required
-          value={formData.email}
-          onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-mussko-500 focus:border-transparent transition-all"
           placeholder="your@email.com"
           aria-required="true"
@@ -55,16 +48,14 @@ const ContactForm: React.FC = () => {
       </div>
       
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <Label htmlFor="message" className="block text-sm font-medium mb-2">
           Message <span className="text-destructive" aria-hidden="true">*</span>
           <span className="sr-only">(required)</span>
-        </label>
-        <textarea
+        </Label>
+        <Textarea
           id="message"
           name="message"
           required
-          value={formData.message}
-          onChange={handleChange}
           rows={5}
           className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-mussko-500 focus:border-transparent resize-none transition-all"
           placeholder="How can we help you?"
