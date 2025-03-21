@@ -115,29 +115,53 @@ export default {
 					'0%': { backgroundPosition: '200% 0' },
 					'100%': { backgroundPosition: '-200% 0' }
 				},
-				// New animations for floating shapes
+				// Enhanced animations for floating shapes
 				'float-slow': {
-					'0%, 100%': { transform: 'translateY(0) rotate(12deg)' },
-					'50%': { transform: 'translateY(-10px) rotate(12deg)' }
+					'0%': { transform: 'translateY(0) rotate(12deg)' },
+					'25%': { transform: 'translateY(-15px) rotate(15deg)' },
+					'50%': { transform: 'translateY(-30px) rotate(12deg)' },
+					'75%': { transform: 'translateY(-15px) rotate(9deg)' },
+					'100%': { transform: 'translateY(0) rotate(12deg)' }
 				},
 				'float-medium': {
-					'0%, 100%': { transform: 'translateY(0) rotate(6deg)' },
-					'50%': { transform: 'translateY(-15px) rotate(6deg)' }
+					'0%': { transform: 'translateY(0) rotate(6deg)' },
+					'33%': { transform: 'translateY(-25px) rotate(10deg)' },
+					'66%': { transform: 'translateY(-15px) rotate(2deg)' },
+					'100%': { transform: 'translateY(0) rotate(6deg)' }
 				},
 				'float-fast': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-20px)' }
+					'0%': { transform: 'translateY(0) translateX(0)' },
+					'25%': { transform: 'translateY(-30px) translateX(10px)' },
+					'50%': { transform: 'translateY(-20px) translateX(20px)' },
+					'75%': { transform: 'translateY(-10px) translateX(10px)' },
+					'100%': { transform: 'translateY(0) translateX(0)' }
 				},
 				'float-rotate': {
 					'0%': { transform: 'translateY(0) rotate(-12deg)' },
-					'25%': { transform: 'translateY(-10px) rotate(-8deg)' },
-					'50%': { transform: 'translateY(0) rotate(-4deg)' },
-					'75%': { transform: 'translateY(10px) rotate(-8deg)' },
+					'20%': { transform: 'translateY(-20px) rotate(-5deg)' },
+					'40%': { transform: 'translateY(-25px) rotate(2deg)' },
+					'60%': { transform: 'translateY(-15px) rotate(8deg)' },
+					'80%': { transform: 'translateY(-5px) rotate(-5deg)' },
 					'100%': { transform: 'translateY(0) rotate(-12deg)' }
 				},
 				'pulse-slow': {
-					'0%, 100%': { transform: 'scale(1)', opacity: '0.2' },
-					'50%': { transform: 'scale(1.05)', opacity: '0.3' }
+					'0%': { transform: 'scale(1)', opacity: '0.2' },
+					'50%': { transform: 'scale(1.15)', opacity: '0.5' },
+					'100%': { transform: 'scale(1)', opacity: '0.2' }
+				},
+				'move-diagonal': {
+					'0%': { transform: 'translate(0, 0) rotate(0deg)' },
+					'25%': { transform: 'translate(15px, -15px) rotate(5deg)' },
+					'50%': { transform: 'translate(30px, -30px) rotate(0deg)' },
+					'75%': { transform: 'translate(15px, -15px) rotate(-5deg)' },
+					'100%': { transform: 'translate(0, 0) rotate(0deg)' }
+				},
+				'move-circular': {
+					'0%': { transform: 'translate(0, 0)' },
+					'25%': { transform: 'translate(20px, 20px)' },
+					'50%': { transform: 'translate(0, 40px)' },
+					'75%': { transform: 'translate(-20px, 20px)' },
+					'100%': { transform: 'translate(0, 0)' }
 				}
 			},
 			animation: {
@@ -147,12 +171,14 @@ export default {
 				'fade-in': 'fade-in 0.8s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'image-shine': 'image-shine 2.5s linear infinite',
-				// New animations for the floating shapes
-				'floating-slow': 'float-slow 8s ease-in-out infinite',
-				'floating-medium': 'float-medium 6s ease-in-out infinite',
-				'floating-fast': 'float-fast 4s ease-in-out infinite',
-				'floating-rotate': 'float-rotate 10s ease-in-out infinite',
-				'pulse-slow': 'pulse-slow 7s ease-in-out infinite'
+				// Enhanced animations for the floating shapes
+				'floating-slow': 'float-slow 12s ease-in-out infinite',
+				'floating-medium': 'float-medium 9s ease-in-out infinite',
+				'floating-fast': 'float-fast 7s ease-in-out infinite',
+				'floating-rotate': 'float-rotate 14s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 6s ease-in-out infinite',
+				'move-diagonal': 'move-diagonal 10s ease-in-out infinite',
+				'move-circular': 'move-circular 15s ease-in-out infinite'
 			}
 		}
 	},

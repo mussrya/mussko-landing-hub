@@ -28,26 +28,37 @@ const Index: React.FC = () => {
       
       {/* Hero Section with Vibrant Gradient Background */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
-        {/* Gradient background with floating geometric shapes */}
+        {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-mussko-600 via-mussko-500 to-purple-500 z-0"></div>
         
-        {/* Geometric shapes */}
+        {/* Animated geometric shapes with enhanced animations */}
         <div className="absolute inset-0 z-10 overflow-hidden">
-          {/* Large rectangle - slow floating animation */}
-          <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/10 rounded-2xl rotate-12 backdrop-blur-sm animate-floating-slow"></div>
+          {/* Large rectangle with enhanced slow floating animation */}
+          <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/20 rounded-2xl rotate-12 backdrop-blur-sm animate-floating-slow shadow-lg"></div>
           
-          {/* Small square - medium speed floating and rotating animation */}
-          <div className="absolute left-1/4 bottom-1/4 w-40 h-40 bg-mussko-300/20 rounded-xl -rotate-12 backdrop-blur-sm animate-floating-rotate"></div>
+          {/* Small square with enhanced rotating animation */}
+          <div className="absolute left-1/4 bottom-1/4 w-40 h-40 bg-mussko-300/30 rounded-xl -rotate-12 backdrop-blur-sm animate-floating-rotate shadow-lg"></div>
           
-          {/* Medium rectangle - bobbing animation */}
-          <div className="absolute left-10 top-20 w-72 h-40 bg-purple-300/10 rounded-2xl rotate-6 backdrop-blur-sm animate-floating-medium"></div>
+          {/* Medium rectangle with enhanced bobbing animation */}
+          <div className="absolute left-10 top-20 w-72 h-40 bg-purple-300/20 rounded-2xl rotate-6 backdrop-blur-sm animate-floating-medium shadow-lg"></div>
           
-          {/* Circle - pulse animation */}
-          <div className="absolute right-1/4 bottom-10 w-56 h-56 bg-blue-300/10 rounded-full backdrop-blur-sm animate-pulse-slow"></div>
+          {/* Circle with enhanced pulse animation */}
+          <div className="absolute right-1/4 bottom-10 w-56 h-56 bg-blue-300/20 rounded-full backdrop-blur-sm animate-pulse-slow shadow-lg"></div>
           
-          {/* Additional small shapes for more movement */}
-          <div className="absolute left-2/3 top-1/3 w-20 h-20 bg-yellow-300/10 rounded-lg backdrop-blur-sm animate-floating-fast"></div>
-          <div className="absolute right-1/3 top-1/6 w-24 h-24 bg-pink-300/10 rounded-full backdrop-blur-sm animate-pulse"></div>
+          {/* Additional shapes for more movement */}
+          <div className="absolute left-2/3 top-1/3 w-24 h-24 bg-yellow-300/20 rounded-lg backdrop-blur-sm animate-floating-fast shadow-lg"></div>
+          <div className="absolute right-1/3 top-1/6 w-28 h-28 bg-pink-300/20 rounded-full backdrop-blur-sm animate-pulse shadow-lg"></div>
+          
+          {/* New diagonal-moving shape */}
+          <div className="absolute left-1/4 top-1/3 w-32 h-32 bg-green-300/20 rounded-lg backdrop-blur-sm animate-move-diagonal shadow-lg"></div>
+          
+          {/* New circular-moving shape */}
+          <div className="absolute right-1/5 top-2/3 w-36 h-36 bg-indigo-300/20 rounded-3xl backdrop-blur-sm animate-move-circular shadow-lg"></div>
+          
+          {/* Small dots with faster movements */}
+          <div className="absolute left-10 bottom-20 w-8 h-8 bg-white/40 rounded-full animate-floating-fast shadow-md"></div>
+          <div className="absolute right-20 top-40 w-6 h-6 bg-white/40 rounded-full animate-floating-medium shadow-md"></div>
+          <div className="absolute left-1/2 top-1/6 w-10 h-10 bg-white/40 rounded-full animate-floating-fast shadow-md"></div>
         </div>
         
         {/* Content */}
