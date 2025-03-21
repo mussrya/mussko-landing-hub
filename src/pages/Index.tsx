@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import ProductCard from '@/components/ProductCard';
@@ -27,12 +26,12 @@ const Index: React.FC = () => {
       <Navbar />
       
       {/* Hero Section with Vibrant Gradient Background */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
+      <header className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-mussko-600 via-mussko-500 to-purple-500 z-0"></div>
         
         {/* Animated geometric shapes with enhanced animations */}
-        <div className="absolute inset-0 z-10 overflow-hidden">
+        <div className="absolute inset-0 z-10 overflow-hidden" aria-hidden="true">
           {/* Large rectangle with enhanced slow floating animation */}
           <div className="absolute -right-20 top-1/4 w-96 h-64 bg-white/20 rounded-2xl rotate-12 backdrop-blur-sm animate-floating-slow shadow-lg"></div>
           
@@ -74,19 +73,21 @@ const Index: React.FC = () => {
               <a 
                 href="#products" 
                 className="py-3 px-8 rounded-lg bg-white text-mussko-700 font-medium hover:bg-opacity-90 transition-colors button-shine"
+                aria-label="Learn about our products"
               >
                 Explore Products
               </a>
               <a 
                 href="#contact" 
                 className="py-3 px-8 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+                aria-label="Contact MussKo team"
               >
                 Contact Us
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </header>
       
       {/* Products Section */}
       <section id="products" className="py-16 md:py-24 bg-white">
@@ -135,19 +136,19 @@ const Index: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-2">Why Choose MussKo?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3" aria-hidden="true">
                       <Rocket size={18} />
                     </span>
                     <span>Innovative SaaS solutions</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3" aria-hidden="true">
                       <Code size={18} />
                     </span>
                     <span>Simplify complex business processes</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3">
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-mussko-100 text-mussko-700 mr-3" aria-hidden="true">
                       <HeadsetIcon size={18} />
                     </span>
                     <span>Dedicated customer support</span>

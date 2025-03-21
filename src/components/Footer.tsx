@@ -9,16 +9,17 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div itemScope itemType="https://schema.org/Organization">
             <div className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-8 h-8 bg-mussko-500 rounded-lg text-white">
-                <Sparkle size={18} className="animate-pulse" />
+                <Sparkle size={18} className="animate-pulse" aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-bold">MussKo</h3>
+              <h3 className="text-lg font-bold" itemProp="name">MussKo</h3>
             </div>
-            <p className="max-w-xs">
+            <p className="max-w-xs" itemProp="description">
               Specializing in building innovative SaaS products that simplify complex business processes.
             </p>
+            <meta itemProp="url" content="https://mussko.com/" />
           </div>
           
           <div>
@@ -30,6 +31,7 @@ const Footer: React.FC = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm text-black hover:text-gray-700 transition-colors"
+                  aria-label="Visit ScheduleLeave website"
                 >
                   ScheduleLeave
                 </a>
@@ -40,6 +42,7 @@ const Footer: React.FC = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm text-black hover:text-gray-700 transition-colors"
+                  aria-label="Visit GenAltText website"
                 >
                   GenAltText
                 </a>
@@ -54,6 +57,7 @@ const Footer: React.FC = () => {
                 <a 
                   href="#contact" 
                   className="text-sm text-black hover:text-gray-700 transition-colors"
+                  aria-label="Go to contact form"
                 >
                   Contact Form
                 </a>
