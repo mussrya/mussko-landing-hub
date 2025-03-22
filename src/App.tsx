@@ -9,8 +9,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Get the base URL from Vite's import.meta.env
-const baseUrl = import.meta.env.BASE_URL || '/mussko/';
+// Get the base URL dynamically
+const baseUrl = import.meta.env.MODE === 'production' ? './' : '/';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

@@ -4,17 +4,11 @@ import App from './App'
 import './index.css'
 
 // Wait for DOM to be ready
-const renderApp = () => {
+document.addEventListener('DOMContentLoaded', () => {
   const rootElement = document.getElementById("root");
   if (rootElement) {
     createRoot(rootElement).render(<App />);
   } else {
     console.error("Failed to find the root element");
   }
-};
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderApp);
-} else {
-  renderApp();
-}
+});

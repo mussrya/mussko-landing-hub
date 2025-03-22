@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/mussko/', // GitHub Pages subdirectory path
+  base: './',
   server: {
     host: "::",
     port: 8080,
@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/index.js',
+        entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name].[ext]',
       },
