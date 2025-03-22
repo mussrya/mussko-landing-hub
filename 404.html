@@ -13,13 +13,20 @@
     // string into just a query string, and then redirects the browser
     // to the new URL with only a query string and hash fragment
     
-    var segmentCount = 0;
+    var segmentCount = 0; // Adjust if your site is in a subdirectory
     
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-      l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+      '/' + // Make sure there's a leading slash
+      (l.pathname.indexOf('/', 1) === -1 ? '' : l.pathname.substring(0, l.pathname.indexOf('/', 1) + 1)) +
+      '?p=/' +
+      l.pathname
+        .slice(1)
+        .split('/')
+        .slice(segmentCount)
+        .join('/')
+        .replace(/&/g, '~and~') +
       (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
       l.hash
     );
