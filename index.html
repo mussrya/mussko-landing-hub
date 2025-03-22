@@ -84,8 +84,8 @@
 
   <body>
     <div id="root"></div>
-    <!-- Changed gptengineer.js to load as a regular script, not using module features -->
-    <script src="https://cdn.gpteng.co/gptengineer.js"></script>
+    <!-- Load gptengineer.js as a module to support import.meta -->
+    <script type="module" src="https://cdn.gpteng.co/gptengineer.js"></script>
     <!-- Ensure main.tsx is loaded as a module -->
     <script type="module" src="./src/main.tsx"></script>
   </body>
