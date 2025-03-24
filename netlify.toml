@@ -1,39 +1,80 @@
 
-# Netlify configuration file
+# Netlify configuration for React SPA with Vite
 
-# Set proper MIME types for all JavaScript files including ES modules
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "text/javascript"
+# Global build settings
+[build]
+  publish = "dist"
+  command = "npm run build"
 
-[[headers]]
-  for = "/assets/*.js"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "/src/*.js"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "/*.jsx"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "/*.ts"
-  [headers.values]
-    Content-Type = "text/javascript"
-    
-[[headers]]
-  for = "/*.tsx"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-# Handle SPA routing (for React Router)
+# Handle SPA routing - redirect all paths to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Set proper MIME types for all files
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+# JavaScript files
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/assets/*.js"
+    [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/src/*.js"
+    [headers.values]
+    Content-Type = "text/javascript"
+
+# TypeScript files
+[[headers]]
+  for = "/*.ts"
+    [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/*.tsx"
+    [headers.values]
+    Content-Type = "text/javascript"
+
+# JSON files
+[[headers]]
+  for = "/*.json"
+    [headers.values]
+    Content-Type = "application/json"
+
+# CSS files
+[[headers]]
+  for = "/*.css"
+    [headers.values]
+    Content-Type = "text/css"
+
+# Image files
+[[headers]]
+  for = "/*.svg"
+    [headers.values]
+    Content-Type = "image/svg+xml"
+
+# Enable gzip compression for text assets
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Content-Encoding = "gzip"
+
+[[headers]]
+  for = "/*.css"
+    [headers.values]
+    Content-Encoding = "gzip"
+
+[[headers]]
+  for = "/*.html"
+    [headers.values]
+    Content-Encoding = "gzip"

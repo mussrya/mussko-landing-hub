@@ -1,14 +1,18 @@
 
-import { createRoot } from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './index.css';
 
-// Create root once the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  const rootElement = document.getElementById("root");
-  if (rootElement) {
-    createRoot(rootElement).render(<App />);
-  } else {
-    console.error("Failed to find the root element");
-  }
-});
+// Simple initialization that's less prone to errors
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} else {
+  console.error("Failed to find the root element");
+}
