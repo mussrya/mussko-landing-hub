@@ -7,21 +7,30 @@
   xmlns="http://www.w3.org/2000/svg"
 >
   <rect width="180" height="180" rx="90" fill="#1b1aff" />
-  <g transform="translate(50, 50) scale(3.5)">
+  <g transform="translate(45, 45) scale(3)">
     <path
-      d="M20.9999 11L18.2767 17.5356C18.1092 17.9387 17.7224 18.1993 17.2855 18.1993H7.99991M7.99991 18.1993L12.1819 15.6993M7.99991 18.1993L10.4999 14.1993"
+      d="M16.5 8L17.3284 9.67157L19 10.5L17.3284 11.3284L16.5 13L15.6716 11.3284L14 10.5L15.6716 9.67157L16.5 8Z"
+      fill="white"
       stroke="white"
-      stroke-width="2"
+      stroke-width="0.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
-      d="M16.5 8L17.3284 9.67157L19 10.5L17.3284 11.3284L16.5 13L15.6716 11.3284L14 10.5L15.6716 9.67157L16.5 8Z"
-      fill="white"
-    />
-    <path
       d="M22.5 19L23.3284 20.6716L25 21.5L23.3284 22.3284L22.5 24L21.6716 22.3284L20 21.5L21.6716 20.6716L22.5 19Z"
       fill="white"
+      stroke="white"
+      stroke-width="0.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M10.5 19L11.3284 20.6716L13 21.5L11.3284 22.3284L10.5 24L9.67157 22.3284L8 21.5L9.67157 20.6716L10.5 19Z"
+      fill="white"
+      stroke="white"
+      stroke-width="0.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </g>
 </svg>
