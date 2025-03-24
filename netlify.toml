@@ -41,18 +41,21 @@
     [headers.values]
     Content-Type = "text/css"
 
-# SVG files
+# SVG files - ensure proper MIME type and caching
 [[headers]]
   for = "/*.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=86400"
 
 [[headers]]
   for = "/favicon.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=86400"
 
 [[headers]]
   for = "/apple-touch-icon.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=86400"
