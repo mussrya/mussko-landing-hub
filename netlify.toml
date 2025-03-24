@@ -1,9 +1,34 @@
 
 # Netlify configuration file
 
-# Set proper MIME types for JavaScript modules
+# Set proper MIME types for all JavaScript files including ES modules
 [[headers]]
   for = "/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/src/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/*.ts"
+  [headers.values]
+    Content-Type = "text/javascript"
+    
+[[headers]]
+  for = "/*.tsx"
   [headers.values]
     Content-Type = "text/javascript"
 
