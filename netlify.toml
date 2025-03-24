@@ -46,3 +46,13 @@
   for = "/*.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
+
+[[headers]]
+  for = "/favicon.svg"
+    [headers.values]
+    Content-Type = "image/svg+xml"
+
+[[headers]]
+  for = "/apple-touch-icon.svg"
+    [headers.values]
+    Content-Type = "image/svg+xml"
