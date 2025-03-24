@@ -1,9 +1,15 @@
 
 import React from 'react';
 import { Sparkle } from 'lucide-react';
+import { scrollToElement } from '@/utils/scrollUtils';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    scrollToElement(id);
+  };
   
   return (
     <footer className="bg-gray-50 border-t border-gray-100">
@@ -56,6 +62,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="#contact" 
+                  onClick={(e) => handleNavClick(e, 'contact')}
                   className="text-sm text-black hover:text-gray-700 transition-colors"
                   aria-label="Go to contact form"
                 >

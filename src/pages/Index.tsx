@@ -1,9 +1,11 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import ProductCard from '@/components/ProductCard';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { Rocket, Code, HeadsetIcon } from 'lucide-react';
+import { scrollToElement } from '@/utils/scrollUtils';
 
 const Index: React.FC = () => {
   const products = [
@@ -20,6 +22,11 @@ const Index: React.FC = () => {
       imageSrc: "https://genalttext.app/wp-content/uploads/2024/10/web-image-scaled.jpg"
     }
   ];
+
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    scrollToElement(id);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -72,6 +79,7 @@ const Index: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
               <a 
                 href="#products" 
+                onClick={(e) => handleNavClick(e, 'products')}
                 className="py-3 px-8 rounded-lg bg-white text-mussko-700 font-medium hover:bg-opacity-90 transition-colors button-shine"
                 aria-label="Learn about our products"
               >
@@ -79,6 +87,7 @@ const Index: React.FC = () => {
               </a>
               <a 
                 href="#contact" 
+                onClick={(e) => handleNavClick(e, 'contact')}
                 className="py-3 px-8 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
                 aria-label="Contact MussKo team"
               >

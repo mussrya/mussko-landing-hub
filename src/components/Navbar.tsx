@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Sparkle } from 'lucide-react';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,6 +18,11 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    scrollToElement(id);
+  };
 
   return (
     <header 
@@ -35,16 +41,25 @@ const Navbar: React.FC = () => {
         </a>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#products" className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}>
+          <a 
+            href="#products" 
+            onClick={(e) => handleNavClick(e, 'products')}
+            className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}
+          >
             Products
           </a>
-          <a href="#contact" className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}>
+          <a 
+            href="#contact" 
+            onClick={(e) => handleNavClick(e, 'contact')}
+            className={`text-sm font-medium ${scrolled ? 'text-mussko-700 hover:text-mussko-900' : 'text-white/90 hover:text-white'} transition-colors`}
+          >
             Contact
           </a>
         </nav>
         
         <a 
           href="#contact" 
+          onClick={(e) => handleNavClick(e, 'contact')}
           className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors button-shine ${
             scrolled 
               ? 'bg-mussko-600 text-white hover:bg-mussko-700' 
